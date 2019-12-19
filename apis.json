@@ -1,0 +1,79 @@
+{
+    "name": "Sendible",
+    "description": "Sendible is a social media management tool that helps agencies and companies boost their productivity on social media. Try it for free.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/472-sendible.jpg",
+    "tags": [
+        "analysis",
+        "emails",
+        "have api",
+        "social",
+        "track"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/sendible\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Sendible",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/472-sendible.jpg",
+            "humanURL": "http:\/\/sendible.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/sendible-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "http:\/\/sendible.com\/api\/"
+        },
+        {
+            "type": "Blog",
+            "url": "http:\/\/blog.sendible.com\/"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "http:\/\/blog.sendible.com\/feed\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/sendible"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "http:\/\/www.crunchbase.com\/company\/sendible"
+        },
+        {
+            "type": "Developers",
+            "url": "http:\/\/sendible.com\/developers"
+        },
+        {
+            "type": "Email",
+            "url": "hello@sendible.com"
+        },
+        {
+            "type": "Email",
+            "url": "privacy@sendible.com"
+        },
+        {
+            "type": "Email",
+            "url": "support@sendible.com"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/sendible"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/sendible.com"
+        }
+    ]
+}
