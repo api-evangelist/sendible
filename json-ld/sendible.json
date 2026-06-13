@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sendible",
+  "description": "Sendible is a social media management platform designed for agencies, marketers, and brand managers. It provides a REST API for managing clients, scheduling posts across multiple networks, monitoring mentions, and accessing social media analytics and reports at scale.",
+  "url": "https://www.sendible.com/",
+  "sameAs": [
+    "https://github.com/Sendible",
+    "https://www.linkedin.com/company/sendible/",
+    "https://x.com/sendible"
+  ],
+  "knowsAbout": [
+    "Social Media Management",
+    "Social Media Scheduling",
+    "Social Media Analytics",
+    "Agency Tools",
+    "Social Media Monitoring"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Sendible API",
+    "description": "REST API for managing social media clients, scheduling posts, monitoring mentions, and accessing analytics and reports across multiple social networks.",
+    "url": "https://developers.sendible.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebSite",
+    "url": "https://www.sendible.com/"
+  },
+  "publishingPrinciples": "https://www.sendible.com/insights",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://support.sendible.com/hc/en-us"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.sendible.com/pricing"
+  }
+}
