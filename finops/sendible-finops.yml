@@ -1,0 +1,101 @@
+name: Sendible FinOps
+description: Financial operations guidance for managing Sendible API and platform
+  costs. Sendible uses a seat-and-profile-based subscription model with five tiers.
+  Cost optimization focuses on right-sizing the plan to actual user and profile counts,
+  leveraging annual billing discounts, and avoiding unnecessary add-ons.
+url: https://www.sendible.com/pricing
+costDrivers:
+  - name: User Seats
+    description: Each plan tier supports a fixed number of users. Exceeding the seat
+      limit requires upgrading to the next tier, which can significantly increase
+      cost.
+    impact: high
+  - name: Social Profiles
+    description: The number of connected social profiles is capped per plan. Agencies
+      managing many clients need higher tiers to accommodate all profiles.
+    impact: high
+  - name: Daily Send Volume
+    description: Plans include daily send caps ranging from 100 to 500 posts per day.
+      High-volume publishers may need to upgrade sooner than expected based on user
+      or profile count alone.
+    impact: medium
+  - name: White Label Add-On
+    description: White-label branding requires an additional $240/month on top of
+      the Advanced or Enterprise plan cost.
+    impact: medium
+  - name: Billing Cycle
+    description: Choosing monthly billing instead of annual billing increases total
+      cost by approximately 15% annually.
+    impact: low
+optimization:
+  - name: Choose Annual Billing
+    description: Switch from monthly to annual billing to save approximately 15% on
+      all plan tiers. For the Enterprise plan this is a savings of $1,344 per year.
+    savingsEstimate: 15% annually
+  - name: Right-Size User Seats
+    description: Audit active users regularly. Remove inactive users to avoid paying
+      for unused seats. If user count falls below the next lower tier threshold, consider
+      downgrading.
+  - name: Audit Social Profiles
+    description: Regularly review connected social profiles and disconnect inactive
+      or redundant accounts to stay within plan limits and avoid unnecessary upgrades.
+  - name: Monitor Daily Send Usage
+    description: Track daily send consumption across the account. If consistently
+      near the cap, evaluate whether scheduling optimization (batching posts, reducing
+      frequency) can reduce send volume before upgrading plans.
+  - name: Evaluate White-Label Need
+    description: White-label is available only on Advanced ($299/mo+) and costs an
+      additional $240/mo. Confirm client-facing branding requirements before committing
+      to this add-on.
+  - name: Use the Free Trial
+    description: Take advantage of the 14-day free trial before committing to a paid
+      plan to validate feature fit and actual usage levels across team members.
+tiers:
+  - plan: Creator
+    monthlyTotal: 29.00
+    annualTotal: 300.00
+    currency: USD
+    users: 1
+    profiles: 6
+    dailySends: 100
+    notes: Best for solo operators and freelancers.
+  - plan: Traction
+    monthlyTotal: 89.00
+    annualTotal: 912.00
+    currency: USD
+    users: 4
+    profiles: 24
+    dailySends: 200
+    notes: Best for small teams managing a moderate number of client accounts.
+  - plan: Scale
+    monthlyTotal: 199.00
+    annualTotal: 2040.00
+    currency: USD
+    users: 7
+    profiles: 49
+    dailySends: 300
+    notes: Most popular; best value for small-to-mid agencies with reporting needs.
+  - plan: Advanced
+    monthlyTotal: 299.00
+    annualTotal: 3060.00
+    currency: USD
+    users: 20
+    profiles: 100
+    dailySends: 500
+    addOns:
+      - name: White Label
+        price: 240.00
+        unit: month
+    notes: Suitable for growing agencies and resellers requiring bulk tools.
+  - plan: Enterprise
+    monthlyTotal: 750.00
+    annualTotal: 7656.00
+    currency: USD
+    users: 80
+    profiles: 400
+    dailySends: unlimited
+    addOns:
+      - name: White Label
+        price: 240.00
+        unit: month
+    notes: For large agencies, franchises, and multi-location businesses. SSO included.

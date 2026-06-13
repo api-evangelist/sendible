@@ -1,0 +1,60 @@
+name: Sendible API Rate Limits
+description: Sendible enforces per-minute rate limits on its REST API to ensure fair
+  usage and platform stability. Users who reach the maximum per-minute request threshold
+  receive an error response and must wait before retrying. Exact numeric thresholds
+  are not publicly documented and may vary by plan or endpoint.
+url: https://developers.sendible.com/
+limits:
+  - name: Per-Minute Request Limit
+    description: A per-minute rate limit is enforced on all API endpoints. When the
+      limit is reached, the API returns an error message instructing the caller to
+      try again in one minute.
+    unit: minute
+    scope: account
+    enforcement: hard
+    retryGuidance: Wait one minute before retrying requests after receiving a rate
+      limit error.
+    publiclyDocumented: false
+  - name: Daily Send Limit (Creator)
+    description: Accounts on the Creator plan are limited to 100 sends per day across
+      all connected social profiles.
+    unit: day
+    value: 100
+    scope: account
+    plan: Creator
+  - name: Daily Send Limit (Traction)
+    description: Accounts on the Traction plan are limited to 200 sends per day across
+      all connected social profiles.
+    unit: day
+    value: 200
+    scope: account
+    plan: Traction
+  - name: Daily Send Limit (Scale)
+    description: Accounts on the Scale plan are limited to 300 sends per day across
+      all connected social profiles.
+    unit: day
+    value: 300
+    scope: account
+    plan: Scale
+  - name: Daily Send Limit (Advanced)
+    description: Accounts on the Advanced plan are limited to 500 sends per day across
+      all connected social profiles.
+    unit: day
+    value: 500
+    scope: account
+    plan: Advanced
+authentication:
+  - type: APIKey
+    description: Sendible API authentication uses an Application ID and a remote API
+      key (or shared key/IV pair). API credentials are obtained by registering an
+      application in the Sendible developer portal.
+    location: header
+  - type: BasicAuth
+    description: Basic authentication with username and password is also supported
+      for some API endpoints.
+notes:
+  - Exact per-minute rate limit values are not publicly disclosed by Sendible.
+  - Rate limits may differ across plan tiers but Sendible does not document tier-specific
+    API rate limits publicly.
+  - Social network posting limits imposed by underlying platforms (Twitter, LinkedIn,
+    etc.) apply independently of Sendible's own limits.

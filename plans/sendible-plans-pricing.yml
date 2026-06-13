@@ -1,0 +1,191 @@
+name: Sendible Plans and Pricing
+description: Sendible offers five subscription tiers for social media management,
+  targeting creators through large agencies. All plans include a 14-day free trial
+  with no credit card required. Annual billing saves approximately 15%.
+url: https://www.sendible.com/pricing
+plans:
+  - name: Creator
+    description: For creators, freelancers, and one-person businesses managing a small
+      number of social profiles.
+    url: https://www.sendible.com/pricing
+    price: 29.00
+    unit: month
+    currency: USD
+    billingCycle: monthly
+    features:
+      - users: 1
+      - socialProfiles: 6
+      - dailySends: 100
+      - smartQueues: 10
+      - directPosting: true
+      - engagementReplies: true
+      - quickReports: true
+      - cloudIntegrations: true
+      - aiAssist: true
+      - mobileApps: true
+    pricingPage: https://www.sendible.com/pricing
+  - name: Creator Annual
+    description: Creator plan billed annually, saving approximately 15%.
+    url: https://www.sendible.com/pricing
+    price: 300.00
+    unit: year
+    currency: USD
+    billingCycle: annual
+    features:
+      - users: 1
+      - socialProfiles: 6
+      - dailySends: 100
+      - smartQueues: 10
+      - directPosting: true
+      - engagementReplies: true
+      - quickReports: true
+      - cloudIntegrations: true
+      - aiAssist: true
+      - mobileApps: true
+    pricingPage: https://www.sendible.com/pricing
+  - name: Traction
+    description: For businesses with fewer than 5 employees needing team collaboration
+      and client management.
+    url: https://www.sendible.com/pricing
+    price: 89.00
+    unit: month
+    currency: USD
+    billingCycle: monthly
+    features:
+      - users: 4
+      - socialProfiles: 24
+      - dailySends: 200
+      - teamCollaboration: true
+      - clientDashboards: true
+      - approvalWorkflows: true
+      - assignmentWorkflows: true
+      - aiAssist: true
+      - mobileApps: true
+    pricingPage: https://www.sendible.com/pricing
+  - name: Traction Annual
+    description: Traction plan billed annually, saving approximately 15%.
+    url: https://www.sendible.com/pricing
+    price: 912.00
+    unit: year
+    currency: USD
+    billingCycle: annual
+    features:
+      - users: 4
+      - socialProfiles: 24
+      - dailySends: 200
+      - teamCollaboration: true
+      - clientDashboards: true
+      - approvalWorkflows: true
+      - assignmentWorkflows: true
+    pricingPage: https://www.sendible.com/pricing
+  - name: Scale
+    description: Most popular plan for small businesses needing advanced productivity
+      features including automated reporting and campaigns.
+    url: https://www.sendible.com/pricing
+    price: 199.00
+    unit: month
+    currency: USD
+    billingCycle: monthly
+    features:
+      - users: 7
+      - socialProfiles: 49
+      - dailySends: 300
+      - customReports: true
+      - automatedReports: true
+      - contentLibrary: true
+      - campaigns: true
+      - dedicatedAccountManager: true
+      - teamCollaboration: true
+      - approvalWorkflows: true
+    pricingPage: https://www.sendible.com/pricing
+  - name: Scale Annual
+    description: Scale plan billed annually, saving approximately 15%.
+    url: https://www.sendible.com/pricing
+    price: 2040.00
+    unit: year
+    currency: USD
+    billingCycle: annual
+    features:
+      - users: 7
+      - socialProfiles: 49
+      - dailySends: 300
+      - customReports: true
+      - automatedReports: true
+      - contentLibrary: true
+      - campaigns: true
+      - dedicatedAccountManager: true
+    pricingPage: https://www.sendible.com/pricing
+  - name: Advanced
+    description: For growing businesses, agencies, and resellers needing bulk posting,
+      advanced permissions, and white-label options.
+    url: https://www.sendible.com/pricing
+    price: 299.00
+    unit: month
+    currency: USD
+    billingCycle: monthly
+    features:
+      - users: 20
+      - socialProfiles: 100
+      - dailySends: 500
+      - bulkPosting: true
+      - customTags: true
+      - advancedPermissions: true
+      - liveReportSharing: true
+      - whiteLabelAddOn: true
+      - teamCollaboration: true
+      - approvalWorkflows: true
+      - automatedReports: true
+    pricingPage: https://www.sendible.com/pricing
+  - name: Advanced Annual
+    description: Advanced plan billed annually, saving approximately 15%.
+    url: https://www.sendible.com/pricing
+    price: 3060.00
+    unit: year
+    currency: USD
+    billingCycle: annual
+    features:
+      - users: 20
+      - socialProfiles: 100
+      - dailySends: 500
+      - bulkPosting: true
+      - advancedPermissions: true
+      - whiteLabelAddOn: true
+    pricingPage: https://www.sendible.com/pricing
+  - name: Enterprise
+    description: For larger agencies, franchises, and multi-location businesses needing
+      full feature access including SSO and dedicated support.
+    url: https://www.sendible.com/pricing
+    price: 750.00
+    unit: month
+    currency: USD
+    billingCycle: monthly
+    features:
+      - users: 80
+      - socialProfiles: 400
+      - sso: true
+      - dedicatedSuccessTeam: true
+      - allFeatures: true
+      - whiteLabelAddOn: true
+      - scalableUsersAndProfiles: true
+    pricingPage: https://www.sendible.com/pricing
+  - name: Enterprise Annual
+    description: Enterprise plan billed annually, saving approximately 15%.
+    url: https://www.sendible.com/pricing
+    price: 7656.00
+    unit: year
+    currency: USD
+    billingCycle: annual
+    features:
+      - users: 80
+      - socialProfiles: 400
+      - sso: true
+      - dedicatedSuccessTeam: true
+      - allFeatures: true
+    pricingPage: https://www.sendible.com/pricing
+notes:
+  - White-label features require a separate add-on at $240/month, available on Advanced
+    and Enterprise tiers only.
+  - Daily sending caps apply across all subscription levels.
+  - SSO is available exclusively on the Enterprise plan.
+  - 14-day free trial available on all plans, no credit card required.
+  - Annual billing provides approximately 15% savings over monthly billing.
