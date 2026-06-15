@@ -1,6 +1,6 @@
 {
   "url": "https://www.sendible.com/insights",
-  "fetched": "2026-06-13",
+  "fetched": "2026-06-14T20:42:17Z",
   "posts": [
     {
       "title": "15 Social Media Strategies for Hotels That Actually Drive Bookings in 2026",
@@ -23,7 +23,7 @@
       "date": "2026-01-16"
     },
     {
-      "title": "How to Repost an Instagram Story in 2026 — Step-by-Step Visual Guide",
+      "title": "How to Repost an Instagram Story in 2026 \u2014 Step-by-Step Visual Guide",
       "url": "https://www.sendible.com/insights/how-to-repost-a-story-on-instagram",
       "date": "2026-05-30"
     },
@@ -117,5 +117,13 @@
       "url": "https://www.sendible.com/insights/social-media-holiday-marketing-tips",
       "date": "2024-11-28"
     }
-  ]
+  ],
+  "repo": "sendible",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/sendible/",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0
 }
