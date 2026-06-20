@@ -3,7 +3,7 @@ description: Sendible is a social media management platform designed for agencie
   marketers, and brand managers. It provides a REST API for managing clients, scheduling
   posts across multiple networks, monitoring mentions, and accessing social media analytics
   and reports at scale.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/sendible/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -19,7 +19,7 @@ apis:
   - name: Sendible API
     description: REST API for managing social media clients, scheduling posts, monitoring
       mentions, and accessing analytics and reports across multiple social networks.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developers.sendible.com/
     baseURL: https://api.sendible.com
     tags:
