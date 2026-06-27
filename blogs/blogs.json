@@ -1,129 +1,18 @@
 {
-  "url": "https://www.sendible.com/insights",
-  "fetched": "2026-06-14T20:42:17Z",
-  "posts": [
-    {
-      "title": "15 Social Media Strategies for Hotels That Actually Drive Bookings in 2026",
-      "url": "https://www.sendible.com/insights/social-media-marketing-strategy-for-hotels",
-      "date": "2026-06-09"
-    },
-    {
-      "title": "12 Ways to Elevate Your Hotel's Social Media Marketing Strategy",
-      "url": "https://www.sendible.com/insights/social-media-for-hotels",
-      "date": "2026-05-21"
-    },
-    {
-      "title": "7 Hotel Industry Trends to Master & Manage in 2026",
-      "url": "https://www.sendible.com/insights/hotel-industry-marketing-trends",
-      "date": "2026-05-14"
-    },
-    {
-      "title": "15 Hotel Marketing Social Media Strategy Ideas to Drive More Bookings in 2026",
-      "url": "https://www.sendible.com/insights/hotel-marketing-strategy",
-      "date": "2026-01-16"
-    },
-    {
-      "title": "How to Repost an Instagram Story in 2026 \u2014 Step-by-Step Visual Guide",
-      "url": "https://www.sendible.com/insights/how-to-repost-a-story-on-instagram",
-      "date": "2026-05-30"
-    },
-    {
-      "title": "12 Best TikTok Video Editors to Create Scroll-Stopping Content (2026)",
-      "url": "https://www.sendible.com/insights/must-have-tiktok-video-editors",
-      "date": "2026-05-27"
-    },
-    {
-      "title": "Mortgage Marketing Automation Guide for 2026",
-      "url": "https://www.sendible.com/insights/mortgage-marketing-automation",
-      "date": "2026-05-26"
-    },
-    {
-      "title": "Threads Insights: What You Can (And Can't) Track in 2026",
-      "url": "https://www.sendible.com/insights/threads-insights",
-      "date": "2026-05-24"
-    },
-    {
-      "title": "49 Ready-to-Use Threads Post Ideas for Businesses and Creators",
-      "url": "https://www.sendible.com/insights/threads-post-ideas",
-      "date": "2026-05-22"
-    },
-    {
-      "title": "30,000% Growth in 3 Months: How to Grow on Threads and Build a Human Brand Presence",
-      "url": "https://www.sendible.com/insights/how-to-grow-on-threads-and-build-a-human-brand-presence",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "Bluesky vs Threads: Which Platform Is Better for Your Brand in 2026?",
-      "url": "https://www.sendible.com/insights/bluesky-vs-threads",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "The 9 Best Project Management Tools for Social Media Content Planning in 2025",
-      "url": "https://www.sendible.com/insights/best-project-management-tools-for-social-media-content-planning",
-      "date": "2025-09-20"
-    },
-    {
-      "title": "The 7 Best Social Media Content Management Tools for 2025",
-      "url": "https://www.sendible.com/insights/the-best-social-media-content-management-tools-you-need-to-try",
-      "date": "2025-09-18"
-    },
-    {
-      "title": "How to Use RSS Feeds for Social Media Content",
-      "url": "https://www.sendible.com/insights/how-to-use-rss-feeds",
-      "date": "2025-06-23"
-    },
-    {
-      "title": "Complete Overview of 2025 Social Media Sizes",
-      "url": "https://www.sendible.com/insights/complete-overview-of-social-media-sizes",
-      "date": "2025-06-06"
-    },
-    {
-      "title": "Sendible's 2025 Product Round Up - What We Built For You",
-      "url": "https://www.sendible.com/insights/whats-coming-in-2025",
-      "date": "2025-12-31"
-    },
-    {
-      "title": "How to Schedule Posts to Bluesky Using Sendible",
-      "url": "https://www.sendible.com/insights/how-to-schedule-posts-to-bluesky-using-sendible",
-      "date": "2025-05-27"
-    },
-    {
-      "title": "The Best of Sendible in 2024: Product Updates Recap",
-      "url": "https://www.sendible.com/insights/sendible-the-best-of-sendible-in-2024",
-      "date": "2024-11-22"
-    },
-    {
-      "title": "Creator and Traction users, your plan just got a free upgrade!",
-      "url": "https://www.sendible.com/insights/creator-traction-update",
-      "date": "2024-10-10"
-    },
-    {
-      "title": "7 Ideas for Thanksgiving Social Media Posts That Boost Engagement and Sales",
-      "url": "https://www.sendible.com/insights/ideas-for-thanksgiving-social-media-posts",
-      "date": "2025-11-10"
-    },
-    {
-      "title": "7 High-Impact Social Media Campaigns for Hotels",
-      "url": "https://www.sendible.com/insights/social-media-campaigns-for-hotels",
-      "date": "2025-11-06"
-    },
-    {
-      "title": "How to Use National Boyfriend Day to Engage Your Audience",
-      "url": "https://www.sendible.com/insights/when-is-national-bf-day",
-      "date": "2025-09-22"
-    },
-    {
-      "title": "23 Social Media Marketing Tips for the 2024 Holiday Season",
-      "url": "https://www.sendible.com/insights/social-media-holiday-marketing-tips",
-      "date": "2024-11-28"
-    }
-  ],
   "repo": "sendible",
   "feeds": [
+    {
+      "source": "https://www.sendible.com/insights/feed/",
+      "feed_url": "https://www.sendible.com/insights/feed/",
+      "title": "",
+      "saved": 1,
+      "method": "feed"
+    },
     {
       "source": "https://www.linkedin.com/company/sendible/",
       "error": "HTTPError"
     }
   ],
-  "post_count": 0
+  "fetched": "2026-06-27T12:03:07Z",
+  "post_count": 3
 }
