@@ -37,6 +37,8 @@ apis:
       - type: FinOps
         url: https://raw.githubusercontent.com/api-evangelist/sendible/refs/heads/main/finops/sendible-finops.yml
 common:
+  - type: DomainSecurity
+    url: security/sendible-domain-security.yml
   - type: Website
     url: https://www.sendible.com/
   - type: Documentation
