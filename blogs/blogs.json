@@ -5,14 +5,17 @@
       "source": "https://www.sendible.com/insights/feed/",
       "feed_url": "https://www.sendible.com/insights/feed/",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "feed"
     },
     {
       "source": "https://www.linkedin.com/company/sendible/",
-      "error": "HTTPError"
+      "feed_url": "https://www.linkedin.com/company/sendible/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T12:03:07Z",
-  "post_count": 3
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 13
 }
