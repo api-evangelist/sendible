@@ -3,7 +3,19 @@ description: Sendible is a social media management platform designed for agencie
   marketers, and brand managers. It provides a REST API for managing clients, scheduling
   posts across multiple networks, monitoring mentions, and accessing social media analytics
   and reports at scale.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: open
+  trial: true
+  try_now: true
+  public: true
+  label: Paid (free trial) · Open access
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sendible.png
 url: https://raw.githubusercontent.com/api-evangelist/sendible/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
