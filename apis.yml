@@ -1,8 +1,12 @@
 name: Sendible
-description: Sendible is a social media management platform designed for agencies,
-  marketers, and brand managers. It provides a REST API for managing clients, scheduling
-  posts across multiple networks, monitoring mentions, and accessing social media analytics
-  and reports at scale.
+description: Sendible is a social media management platform for agencies, franchises,
+  multi-location brands and marketing teams, headquartered in London. It schedules and
+  publishes content across Instagram, Facebook, LinkedIn, X, TikTok, Threads, Bluesky,
+  YouTube, Google Business Profile and WordPress, centralises replies in a Priority
+  Inbox, and produces client-facing analytics reports. Sendible operates a live REST
+  API at api.sendible.com/api/v1 and markets an API-led path for software integrators,
+  but the public developer portal has been retired and no machine-readable contract is
+  published.
 accessModel:
   pricing: paid
   onboarding: open
@@ -18,7 +22,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sendible.png
 url: https://raw.githubusercontent.com/api-evangelist/sendible/refs/heads/main/apis.yml
 created: '2026-06-13'
-modified: '2026-06-13'
+modified: '2026-08-13'
 specificationVersion: '0.19'
 tags:
   - Social Media
@@ -30,9 +34,15 @@ tags:
 apis:
   - name: Sendible API
     description: REST API for managing social media clients, scheduling posts, monitoring
-      mentions, and accessing analytics and reports across multiple social networks.
+      mentions, and accessing analytics and reports across multiple social networks. The
+      API is live at https://api.sendible.com/api/v1 and answers HTTP 401 with Basic
+      realm="Application" on every path, but Sendible publishes no reference, no OpenAPI
+      and no authentication documentation - the developer portal at
+      developers.sendible.com was retired and now 301s to the marketing home page, and
+      the help centre's API article (id 208053026) returns 404. Credentials are issued
+      only from inside a signed-in account.
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developers.sendible.com/
+    humanURL: https://www.sendible.com/solutions/software-integrators
     baseURL: https://api.sendible.com
     tags:
       - Social Media
@@ -40,8 +50,6 @@ apis:
       - Analytics
       - Agencies
     properties:
-      - type: Documentation
-        url: https://developers.sendible.com/
       - type: Plans
         url: https://raw.githubusercontent.com/api-evangelist/sendible/refs/heads/main/plans/sendible-plans-pricing.yml
       - type: RateLimits
@@ -53,8 +61,6 @@ common:
     url: security/sendible-domain-security.yml
   - type: Website
     url: https://www.sendible.com/
-  - type: Documentation
-    url: https://developers.sendible.com/
   - type: GitHubOrg
     url: https://github.com/Sendible
   - type: LinkedIn
@@ -71,6 +77,48 @@ common:
     url: https://raw.githubusercontent.com/api-evangelist/sendible/refs/heads/main/rate-limits/sendible-rate-limits.yml
   - type: FinOps
     url: https://raw.githubusercontent.com/api-evangelist/sendible/refs/heads/main/finops/sendible-finops.yml
+  - type: Support
+    url: https://support.sendible.com/hc/en-us
+  - type: SignUp
+    url: https://app.sendible.com/signup
+  - type: TermsOfService
+    url: https://www.sendible.com/terms
+  - type: PrivacyPolicy
+    url: https://www.sendible.com/privacy
+  - type: ChangeLog
+    url: https://www.sendible.com/changelog
+  - type: ChangeLog
+    name: Sendible changelog (captured)
+    url: changelog/sendible-changelog.yml
+  - type: Lifecycle
+    url: lifecycle/sendible-lifecycle.yml
+  - type: Security
+    url: https://www.sendible.com/vulnerability-reporting
+  - type: VulnerabilityDisclosure
+    url: security/sendible-vulnerability-disclosure.yml
+  - type: LLMsTxt
+    url: llms/sendible-llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-13'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1
+  contract_discovery:
+    openapi: not-found
+    graphql: not-found
+    mcp: not-found
+    agent_card: not-found
+    asyncapi: not-found
+    llms_txt: not-found
+    note: >-
+      Probed /openapi.json, /openapi.yaml, /swagger.json, /api-docs, /docs and
+      /llms.txt on api.sendible.com, developers.sendible.com, www.sendible.com
+      and app.sendible.com; /graphql and /mcp on api.sendible.com; and
+      /.well-known/agent-card.json plus the legacy /.well-known/agent.json on
+      every host. Every candidate 404d, 403d or 301d to the marketing home page.
+      sendible.com wildcards all unknown subdomains to www.sendible.com, so
+      status./trust./security./docs./developer.sendible.com all answer 200 with
+      the marketing site and are NOT evidence of those surfaces.
