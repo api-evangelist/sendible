@@ -1,60 +1,82 @@
-name: Sendible API Rate Limits
-description: Sendible enforces per-minute rate limits on its REST API to ensure fair
-  usage and platform stability. Users who reach the maximum per-minute request threshold
-  receive an error response and must wait before retrying. Exact numeric thresholds
-  are not publicly documented and may vary by plan or endpoint.
-url: https://developers.sendible.com/
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://support.sendible.com/hc/en-us/articles/208538106-Account-sending-limits
+  and https://www.sendible.com/pricing
+name: Sendible Rate Limits
+description: >-
+  Sendible publishes PLATFORM sending limits (posts per day, per workspace) on
+  its pricing page and in its help centre. It publishes NO API rate limits: there
+  is no documented per-minute request ceiling, no documented burst allowance and
+  no documented rate-limit response header, because Sendible no longer publishes
+  API documentation at all. The limits below are the sending quotas an API caller
+  will hit indirectly, not request-rate limits.
+url: https://support.sendible.com/hc/en-us/articles/208538106-Account-sending-limits
+limit_count: 6
+scope_note: Limits are applied per workspace, not per API key.
+headers:
+  documented: false
+  observed: []
+  note: >-
+    No X-RateLimit-*, RateLimit-* or Retry-After header could be observed:
+    every path under https://api.sendible.com/api/v1 returns 401 before a
+    request is rate-limited, so no runtime signal is reachable anonymously.
+exhaustion_status_code: null
 limits:
-  - name: Per-Minute Request Limit
-    description: A per-minute rate limit is enforced on all API endpoints. When the
-      limit is reached, the API returns an error message instructing the caller to
-      try again in one minute.
-    unit: minute
-    scope: account
-    enforcement: hard
-    retryGuidance: Wait one minute before retrying requests after receiving a rate
-      limit error.
-    publiclyDocumented: false
-  - name: Daily Send Limit (Creator)
-    description: Accounts on the Creator plan are limited to 100 sends per day across
-      all connected social profiles.
+  - name: Daily send limit (Core)
+    description: 100 posts per day per workspace.
     unit: day
     value: 100
-    scope: account
-    plan: Creator
-  - name: Daily Send Limit (Traction)
-    description: Accounts on the Traction plan are limited to 200 sends per day across
-      all connected social profiles.
+    scope: workspace
+    plan: Core
+    publiclyDocumented: true
+  - name: Daily send limit (Plus)
+    description: 200 posts per day per workspace.
     unit: day
     value: 200
-    scope: account
-    plan: Traction
-  - name: Daily Send Limit (Scale)
-    description: Accounts on the Scale plan are limited to 300 sends per day across
-      all connected social profiles.
+    scope: workspace
+    plan: Plus
+    publiclyDocumented: true
+  - name: Daily send limit (Premium)
+    description: 300 posts per day per workspace.
     unit: day
     value: 300
-    scope: account
-    plan: Scale
-  - name: Daily Send Limit (Advanced)
-    description: Accounts on the Advanced plan are limited to 500 sends per day across
-      all connected social profiles.
+    scope: workspace
+    plan: Premium
+    publiclyDocumented: true
+  - name: Daily send limit (Elite)
+    description: 500 posts per day per workspace.
     unit: day
     value: 500
-    scope: account
-    plan: Advanced
-authentication:
-  - type: APIKey
-    description: Sendible API authentication uses an Application ID and a remote API
-      key (or shared key/IV pair). API credentials are obtained by registering an
-      application in the Sendible developer portal.
-    location: header
-  - type: BasicAuth
-    description: Basic authentication with username and password is also supported
-      for some API endpoints.
+    scope: workspace
+    plan: Elite
+    publiclyDocumented: true
+  - name: Daily send limit (Enterprise)
+    description: 500 posts per day per workspace.
+    unit: day
+    value: 500
+    scope: workspace
+    plan: Enterprise
+    publiclyDocumented: true
+  - name: Daily send limit (trial)
+    description: 100 posts per day per workspace on trial accounts.
+    unit: day
+    value: 100
+    scope: workspace
+    plan: Trial
+    publiclyDocumented: true
+raise_limit:
+  process: Log a support ticket to discuss having a sending limit raised.
+  url: https://support.sendible.com/hc/en-us
 notes:
-  - Exact per-minute rate limit values are not publicly disclosed by Sendible.
-  - Rate limits may differ across plan tiers but Sendible does not document tier-specific
-    API rate limits publicly.
-  - Social network posting limits imposed by underlying platforms (Twitter, LinkedIn,
-    etc.) apply independently of Sendible's own limits.
+  - >-
+    A per-minute API request limit was recorded in the 2026-06 capture of this
+    file, sourced from the developer portal that has since been retired
+    (developers.sendible.com now 301s to the marketing home page). It could not
+    be re-verified on any current first-party surface in this pass, so it has
+    been removed rather than carried forward as an unattributed claim.
+  - >-
+    Social network posting limits imposed by the underlying platforms (X,
+    LinkedIn, Instagram and so on) apply independently of Sendible's own limits;
+    Sendible documents LinkedIn's separately at
+    https://support.sendible.com/hc/en-us/articles/209636013-LinkedIn-posting-limits

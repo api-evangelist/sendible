@@ -1,101 +1,129 @@
+generated: '2026-08-13'
+method: derived
+source: plans/sendible-plans-pricing.yml (re-read from https://www.sendible.com/pricing on 2026-08-13)
 name: Sendible FinOps
-description: Financial operations guidance for managing Sendible API and platform
-  costs. Sendible uses a seat-and-profile-based subscription model with five tiers.
-  Cost optimization focuses on right-sizing the plan to actual user and profile counts,
-  leveraging annual billing discounts, and avoiding unnecessary add-ons.
+description: >-
+  Financial operations guidance for Sendible. Sendible sells a workspace-based
+  subscription with unlimited users on every tier, so the cost driver is not
+  seats — it is the number of workspaces (each bundling 6 social profiles) and
+  the daily send ceiling attached to the tier. White labelling is a substantial
+  separate add-on on Elite and Enterprise. There is no metered API pricing: API
+  access carries no published quota, price or overage.
 url: https://www.sendible.com/pricing
 costDrivers:
-  - name: User Seats
-    description: Each plan tier supports a fixed number of users. Exceeding the seat
-      limit requires upgrading to the next tier, which can significantly increase
-      cost.
+  - name: Workspaces
+    description: >-
+      Capacity is sold in workspaces (1 on Core up to 50 on Enterprise), each
+      bundling 6 social profiles. Running out of workspaces — not running out of
+      seats — is what forces a tier upgrade.
     impact: high
-  - name: Social Profiles
-    description: The number of connected social profiles is capped per plan. Agencies
-      managing many clients need higher tiers to accommodate all profiles.
+  - name: Social profiles
+    description: >-
+      Profiles are allocated per workspace at 6 each, so profile demand and
+      workspace demand move together. Additional workspace bundles can be added
+      or removed from subscription settings without a full tier change.
     impact: high
-  - name: Daily Send Volume
-    description: Plans include daily send caps ranging from 100 to 500 posts per day.
-      High-volume publishers may need to upgrade sooner than expected based on user
-      or profile count alone.
+  - name: White label add-on
+    description: >-
+      White labelling is available only on Elite and Enterprise, at an
+      additional $349/month (Elite) or $800/month (Enterprise) — more than the
+      Elite subscription itself.
+    impact: high
+  - name: Daily send volume
+    description: >-
+      Plans cap sends at 100/200/300/500 posts per day per workspace. High-volume
+      publishers can hit the ceiling before they exhaust workspaces.
     impact: medium
-  - name: White Label Add-On
-    description: White-label branding requires an additional $240/month on top of
-      the Advanced or Enterprise plan cost.
-    impact: medium
-  - name: Billing Cycle
-    description: Choosing monthly billing instead of annual billing increases total
-      cost by approximately 15% annually.
+  - name: Billing cycle
+    description: >-
+      Monthly billing costs roughly 15% more than yearly billing across every
+      tier.
     impact: low
 optimization:
-  - name: Choose Annual Billing
-    description: Switch from monthly to annual billing to save approximately 15% on
-      all plan tiers. For the Enterprise plan this is a savings of $1,344 per year.
-    savingsEstimate: 15% annually
-  - name: Right-Size User Seats
-    description: Audit active users regularly. Remove inactive users to avoid paying
-      for unused seats. If user count falls below the next lower tier threshold, consider
-      downgrading.
-  - name: Audit Social Profiles
-    description: Regularly review connected social profiles and disconnect inactive
-      or redundant accounts to stay within plan limits and avoid unnecessary upgrades.
-  - name: Monitor Daily Send Usage
-    description: Track daily send consumption across the account. If consistently
-      near the cap, evaluate whether scheduling optimization (batching posts, reducing
-      frequency) can reduce send volume before upgrading plans.
-  - name: Evaluate White-Label Need
-    description: White-label is available only on Advanced ($299/mo+) and costs an
-      additional $240/mo. Confirm client-facing branding requirements before committing
-      to this add-on.
-  - name: Use the Free Trial
-    description: Take advantage of the 14-day free trial before committing to a paid
-      plan to validate feature fit and actual usage levels across team members.
+  - name: Bill yearly
+    description: >-
+      Yearly billing is ~15% cheaper on every tier — for example Elite falls from
+      $299 to $255 per month, and Enterprise from $750 to $638.
+    savingsEstimate: ~15% annually
+  - name: Buy workspace bundles instead of a tier upgrade
+    description: >-
+      Additional workspaces (with 6 profiles each) can be added to an existing
+      plan from subscription settings, which is often cheaper than jumping a tier
+      for capacity alone.
+  - name: Audit connected profiles per workspace
+    description: >-
+      Disconnect inactive or redundant social profiles so workspaces are not
+      consumed by dormant accounts.
+  - name: Confirm the white-label requirement before committing
+    description: >-
+      White label is a $349–$800/month add-on on top of Elite or Enterprise;
+      confirm the client-facing branding requirement is real before buying it.
+  - name: Ignore seat count when sizing
+    description: >-
+      Every tier includes unlimited users, so adding team members, freelancers,
+      stakeholders or clients does not change the bill. Size on workspaces and
+      sends instead.
+  - name: Use the free trial
+    description: >-
+      A 14-day free trial with no card required lets real workspace and send
+      usage be measured before committing.
 tiers:
-  - plan: Creator
-    monthlyTotal: 29.00
-    annualTotal: 300.00
+  - plan: Core
+    monthlyTotal: 35.00
+    annualPerMonth: 31.00
     currency: USD
-    users: 1
+    users: unlimited
+    workspaces: 1
     profiles: 6
     dailySends: 100
-    notes: Best for solo operators and freelancers.
-  - plan: Traction
-    monthlyTotal: 89.00
-    annualTotal: 912.00
+    notes: Essential management for one or two brands or locations.
+  - plan: Plus
+    monthlyTotal: 99.00
+    annualPerMonth: 86.00
     currency: USD
-    users: 4
-    profiles: 24
+    users: unlimited
+    workspaces: 3
+    profiles: 18
     dailySends: 200
-    notes: Best for small teams managing a moderate number of client accounts.
-  - plan: Scale
+    notes: Adds assignment and approval workflows.
+  - plan: Premium
     monthlyTotal: 199.00
-    annualTotal: 2040.00
+    annualPerMonth: 170.00
     currency: USD
-    users: 7
-    profiles: 49
+    users: unlimited
+    workspaces: 7
+    profiles: 42
     dailySends: 300
-    notes: Most popular; best value for small-to-mid agencies with reporting needs.
-  - plan: Advanced
+    notes: Most popular; adds content libraries, custom branded reports and campaigns.
+  - plan: Elite
     monthlyTotal: 299.00
-    annualTotal: 3060.00
+    annualPerMonth: 255.00
     currency: USD
-    users: 20
-    profiles: 100
+    users: unlimited
+    workspaces: 15
+    profiles: 90
     dailySends: 500
     addOns:
-      - name: White Label
-        price: 240.00
+      - name: White label
+        price: 349.00
         unit: month
-    notes: Suitable for growing agencies and resellers requiring bulk tools.
+    notes: Adds dynamic fields and advanced user permissions.
   - plan: Enterprise
     monthlyTotal: 750.00
-    annualTotal: 7656.00
+    annualPerMonth: 638.00
     currency: USD
-    users: 80
-    profiles: 400
-    dailySends: unlimited
+    users: unlimited
+    workspaces: 50
+    profiles: 300
+    dailySends: 500
     addOns:
-      - name: White Label
-        price: 240.00
+      - name: White label
+        price: 800.00
         unit: month
-    notes: For large agencies, franchises, and multi-location businesses. SSO included.
+    notes: Adds SSO and a dedicated account manager.
+notes:
+  - >-
+    Supersedes the 2026-06 capture, which was built on the retired
+    Creator / Traction / Scale / Advanced tier lineup, a per-seat model that no
+    longer exists, and a $240/month white-label price that is no longer published.
+  - No API-specific pricing, quota or overage is published on any tier.

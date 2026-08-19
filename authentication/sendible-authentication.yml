@@ -1,0 +1,38 @@
+generated: '2026-08-13'
+method: probed
+source: 'live unauthenticated GET https://api.sendible.com/api/v1/services.json'
+docs: null
+summary:
+  types: [http]
+  http_schemes: [basic]
+  api_key_in: []
+  oauth2_flows: []
+  publicly_documented: false
+schemes:
+  - name: basicAuth
+    type: http
+    scheme: basic
+    realm: Application
+    description: >-
+      Every path under https://api.sendible.com/api/v1 answers HTTP 401 with the
+      response header `WWW-Authenticate: Basic realm="Application"` and the body
+      `HTTP Basic: Access denied.` — including paths that do not exist, so the
+      challenge is emitted by the edge before routing. This is an OBSERVED
+      runtime fact, not a documented contract.
+    sources: ['probe: https://api.sendible.com/api/v1/services.json']
+evidence:
+  - {url: 'https://api.sendible.com/api/v1', http_status: 401, www_authenticate: 'Basic realm="Application"'}
+  - {url: 'https://api.sendible.com/api/v1/services.json', http_status: 401, body: 'HTTP Basic: Access denied.'}
+  - {url: 'https://api.sendible.com/api/v1/mentions.json', http_status: 401, body: 'HTTP Basic: Access denied.'}
+  - {url: 'https://api.sendible.com/api/v1/openapi.json', http_status: 401, body: 'HTTP Basic: Access denied.'}
+note: >-
+  NO `Authentication` pointer is emitted in apis.yml for this file, deliberately.
+  The scoring check it feeds is `authentication_documented`, and Sendible
+  publishes no authentication documentation anywhere on a first-party surface:
+  developers.sendible.com is retired (301 to the marketing home page) and the
+  Zendesk help centre carries no API article — the former "How do I set up
+  services for my clients via the API?" article (id 208053026) now returns 404
+  from the help-centre API. Credentials (application id, API key, shared key/iv)
+  are issued only from inside a signed-in Sendible account. This artifact
+  records what we could observe from outside; it must not be read as the
+  provider documenting their auth model.

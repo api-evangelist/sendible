@@ -1,0 +1,61 @@
+generated: '2026-08-13'
+method: probed
+source: live GET of /.well-known/* on every Sendible host in apis.yml
+note: >-
+  Every probed path returned 404 (or 403 from the S3-backed app host). No
+  well-known document of any kind is served, so NO WellKnown / SecurityTxt
+  pointer is emitted in apis.yml — this file records a verified absence, not a
+  presence. Note also that sendible.com resolves ALL unknown subdomains to
+  www.sendible.com (verified with a control probe of
+  zzz-nonexistent-test.sendible.com, which returned 200 after a 301 to the
+  marketing home page), so any 200 observed on a sendible.com subdomain must be
+  checked against that wildcard before it is treated as evidence.
+hosts:
+  - host: www.sendible.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404, content_type: text/html}
+      - {path: /.well-known/openid-configuration, status: 404, content_type: text/html}
+      - {path: /.well-known/oauth-authorization-server, status: 404, content_type: text/html}
+      - {path: /.well-known/oauth-protected-resource, status: 404, content_type: text/html}
+      - {path: /.well-known/api-catalog, status: 404, content_type: text/html}
+      - {path: /.well-known/ai-plugin.json, status: 404, content_type: text/html}
+      - {path: /.well-known/agent-card.json, status: 404, content_type: text/html}
+      - {path: /.well-known/agent.json, status: 404, content_type: text/html}
+  - host: api.sendible.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/oauth-protected-resource, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /.well-known/agent-card.json, status: 404}
+      - {path: /.well-known/agent.json, status: 404}
+  - host: app.sendible.com
+    note: single-page app served from S3; missing keys answer 403 AccessDenied
+    documents:
+      - {path: /.well-known/security.txt, status: 403}
+      - {path: /.well-known/agent-card.json, status: 403}
+      - {path: /.well-known/agent.json, status: 403}
+      - {path: /.well-known/openid-configuration, status: 403}
+      - {path: /.well-known/oauth-authorization-server, status: 403}
+      - {path: /.well-known/api-catalog, status: 403}
+      - {path: /.well-known/ai-plugin.json, status: 403}
+  - host: developers.sendible.com
+    note: >-
+      Retired. The host now 301s every path to https://www.sendible.com/ via the
+      sendible.com wildcard, so no /.well-known/ path can be served here.
+    documents:
+      - {path: /.well-known/security.txt, status: 301}
+      - {path: /.well-known/agent-card.json, status: 301}
+      - {path: /.well-known/agent.json, status: 301}
+  - host: support.sendible.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/agent-card.json, status: 404}
+      - {path: /.well-known/agent.json, status: 404}
+summary:
+  documents_found: 0
+  security_txt: false
+  agent_card: false
+  oauth_metadata: false

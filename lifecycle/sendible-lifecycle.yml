@@ -1,0 +1,45 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://www.sendible.com/changelog, https://www.sendible.com/terms, live
+  probes of api.sendible.com and the retired developers.sendible.com host
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: null
+  evidence: >-
+    https://api.sendible.com/api/v1 answers 401 (the API is live at a
+    path-versioned /api/v1 prefix); no /api/v2 or version negotiation is
+    documented anywhere on a first-party surface.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: >-
+    No deprecation or sunset policy is published. RFC 8594 Sunset/Deprecation
+    header support could not be observed because every /api/v1 path returns 401
+    before any resource is served. NO `Deprecation` pointer is emitted.
+sla:
+  url: null
+  uptime_target: null
+status_page:
+  url: null
+  note: >-
+    Sendible operates NO status page. status.sendible.com returns HTTP 200 but is
+    a false positive: sendible.com wildcards every unknown subdomain to
+    https://www.sendible.com/, verified with a control probe of
+    zzz-nonexistent-test.sendible.com which behaves identically. NO `StatusPage`
+    pointer is emitted.
+developer_portal:
+  url: https://developers.sendible.com/
+  state: retired
+  observed_status: 301
+  redirects_to: https://www.sendible.com/
+  note: >-
+    The Sendible developer portal is gone. developers.sendible.com now 301s to
+    the marketing home page (last archived as a live portal by the Wayback
+    Machine in 2019), and the Zendesk help centre's API article (id 208053026,
+    "How do I set up services for my clients via the API?") returns 404 from the
+    help-centre API. The API itself is still live and auth-gated.
+changelog: https://www.sendible.com/changelog
+product_updates: https://www.sendible.com/product
+deprecated_operations: []

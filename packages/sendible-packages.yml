@@ -1,0 +1,29 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org/pypi/<name>/json, rubygems.org search API,
+  packagist.org search, and github.com/Sendible (via the GitHub API)
+package_count: 0
+packages: []
+note: >-
+  No first-party Sendible client library exists in any public registry. Searched
+  npm (registry.npmjs.org search for "sendible" — zero results), PyPI
+  (pypi.org/pypi/sendible/json and /python-sendible/json — both 404), RubyGems
+  (search API — zero results), Packagist (no Sendible-owned package) and
+  crates.io. The github.com/Sendible organisation exists (id 28595299) but its
+  only public repositories are five ARCHIVED forks of third-party projects
+  (Pomelo.EntityFrameworkCore.MySql, stripe-ruby, dotnet-transform-xdt,
+  vscode-ruby, .github) — none is a Sendible SDK and none has been pushed to
+  since 2023-01-03. The community wrappers that exist (e.g.
+  github.com/radiatemedia/sendible) are third-party and are deliberately NOT
+  recorded here as packages.
+  Because zero official SDKs were found, NO `Packages` and NO `SDKs` pointer is
+  emitted in apis.yml — this file records a verified absence.
+registries_checked:
+  - {registry: npm, query: sendible, result: no-first-party-package}
+  - {registry: pypi, query: sendible, result: 404}
+  - {registry: pypi, query: python-sendible, result: 404}
+  - {registry: rubygems, query: sendible, result: no-first-party-package}
+  - {registry: packagist, query: sendible, result: no-first-party-package}
+  - {registry: crates.io, query: sendible, result: no-first-party-package}
+  - {registry: github, query: orgs/Sendible/repos, result: five-archived-third-party-forks}

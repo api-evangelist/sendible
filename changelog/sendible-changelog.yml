@@ -1,0 +1,53 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.sendible.com/changelog
+name: Sendible Changelog
+description: >-
+  Sendible publishes a dated, human-readable product changelog at
+  www.sendible.com/changelog. Entries are grouped by release date with named
+  features, an Improvements list and a Fixes list, plus an "Upcoming" note. It is
+  a PRODUCT changelog covering the Sendible application (Composer, Calendar,
+  Media System, Reports); Sendible publishes no separate API changelog and no
+  API version history, so this artifact carries no breaking-change signal for
+  API consumers.
+url: https://www.sendible.com/changelog
+scheme: dated-entries
+covers: product
+api_changelog: false
+current_version: null
+entries:
+  - date: '2026-06-22'
+    title: Alt text
+    highlights:
+      - Descriptive alt text (up to 200 characters per image) can now be added in the
+        Instagram, LinkedIn and X tabs of the Composer.
+    breaking: false
+  - date: '2026-03-18'
+    title: Unified Calendar
+    highlights:
+      - Calendar redesigned into a single space with filters by status, network, campaign
+        and user, drag-and-drop rescheduling, and monthly/weekly/daily layouts (beta).
+      - 'Mixed Media: backend and network senders refactored; maximum media attachments
+        raised from 15 to 40 across supported networks.'
+    breaking: false
+  - date: '2026-01-07'
+    title: Enhanced Media Management
+    highlights:
+      - Media infrastructure rebuilt for more reliable publishing, faster uploads and
+        bulk upload of multiple files.
+    breaking: false
+  - date: '2025-11-21'
+    title: LinkedIn Reporting Improvements
+    highlights:
+      - Follower growth in LinkedIn Engagement reports is no longer incorrectly attributed
+        to a single day.
+    breaking: false
+upcoming:
+  - title: Workspaces
+    description: >-
+      Manage clients and locations within dedicated workspaces, replacing
+      individual user logins with a simplified model for team collaboration.
+note: >-
+  Recent window only — the live page at https://www.sendible.com/changelog is the
+  source of truth. A second first-party surface, https://www.sendible.com/product
+  ("Product Updates"), is linked from the site footer.

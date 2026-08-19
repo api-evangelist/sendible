@@ -1,0 +1,24 @@
+generated: '2026-08-13'
+method: searched
+status: none
+source: >-
+  Probed https://api.sendible.com/mcp (404), https://api.sendible.com/graphql
+  (404), the sendible.com sitemap (607 URLs, no developer/MCP page), the
+  Sendible Zendesk help centre (155 published articles, none about an API or
+  MCP) and the github.com/Sendible organisation (five archived third-party
+  forks).
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+server: null
+tools: []
+note: >-
+  Sendible ships no MCP server — neither a remote endpoint nor a stdio package —
+  and no candidate tool list could be DERIVED either, because Sendible publishes
+  no OpenAPI to derive one from (see x-coverage in apis.yml). The REST API at
+  https://api.sendible.com/api/v1 is real but every path under it answers 401
+  with `WWW-Authenticate: Basic realm="Application"`, so its operation set cannot
+  be enumerated anonymously. No `MCPServer` pointer is emitted in apis.yml, and
+  no endpoint URL is recorded: a guessed MCP path would read as a verified agent
+  surface. This file records a verified absence.

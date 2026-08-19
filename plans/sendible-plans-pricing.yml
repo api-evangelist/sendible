@@ -1,191 +1,132 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.sendible.com/pricing
 name: Sendible Plans and Pricing
-description: Sendible offers five subscription tiers for social media management,
-  targeting creators through large agencies. All plans include a 14-day free trial
-  with no credit card required. Annual billing saves approximately 15%.
+description: >-
+  Sendible sells five self-serve subscription tiers — Core, Plus, Premium, Elite
+  and Enterprise — priced per month with unlimited users on every plan. Capacity
+  is sold as workspaces, and each workspace bundles 6 social profiles. Yearly
+  billing saves approximately 15%. All plans include a 14-day free trial with no
+  card required. White labelling is a paid add-on on Elite and Enterprise only.
+  Prices are published in USD, GBP and EUR; the values below are USD.
 url: https://www.sendible.com/pricing
+currency: USD
+plan_count: 5
+trial:
+  length_days: 14
+  card_required: false
 plans:
-  - name: Creator
-    description: For creators, freelancers, and one-person businesses managing a small
-      number of social profiles.
+  - name: Core
+    description: Essential management for 1 or 2 brands or locations.
     url: https://www.sendible.com/pricing
-    price: 29.00
+    price: 35.00
     unit: month
     currency: USD
     billingCycle: monthly
+    annualPricePerMonth: 31.00
     features:
-      - users: 1
+      - users: unlimited
+      - workspaces: 1
       - socialProfiles: 6
       - dailySends: 100
       - smartQueues: 10
-      - directPosting: true
-      - engagementReplies: true
-      - quickReports: true
-      - cloudIntegrations: true
-      - aiAssist: true
-      - mobileApps: true
-    pricingPage: https://www.sendible.com/pricing
-  - name: Creator Annual
-    description: Creator plan billed annually, saving approximately 15%.
+      - unlimitedScheduling: true
+      - unlimitedAICredits: true
+      - bulkScheduling: true
+      - monitoringAndReplying: true
+      - standardReports: true
+  - name: Plus
+    description: Team collaboration tools for growing brands.
     url: https://www.sendible.com/pricing
-    price: 300.00
-    unit: year
-    currency: USD
-    billingCycle: annual
-    features:
-      - users: 1
-      - socialProfiles: 6
-      - dailySends: 100
-      - smartQueues: 10
-      - directPosting: true
-      - engagementReplies: true
-      - quickReports: true
-      - cloudIntegrations: true
-      - aiAssist: true
-      - mobileApps: true
-    pricingPage: https://www.sendible.com/pricing
-  - name: Traction
-    description: For businesses with fewer than 5 employees needing team collaboration
-      and client management.
-    url: https://www.sendible.com/pricing
-    price: 89.00
+    price: 99.00
     unit: month
     currency: USD
     billingCycle: monthly
+    annualPricePerMonth: 86.00
     features:
-      - users: 4
-      - socialProfiles: 24
+      - users: unlimited
+      - workspaces: 3
+      - socialProfiles: 18
       - dailySends: 200
-      - teamCollaboration: true
-      - clientDashboards: true
-      - approvalWorkflows: true
-      - assignmentWorkflows: true
-      - aiAssist: true
-      - mobileApps: true
-    pricingPage: https://www.sendible.com/pricing
-  - name: Traction Annual
-    description: Traction plan billed annually, saving approximately 15%.
-    url: https://www.sendible.com/pricing
-    price: 912.00
-    unit: year
-    currency: USD
-    billingCycle: annual
-    features:
-      - users: 4
-      - socialProfiles: 24
-      - dailySends: 200
-      - teamCollaboration: true
-      - clientDashboards: true
-      - approvalWorkflows: true
-      - assignmentWorkflows: true
-    pricingPage: https://www.sendible.com/pricing
-  - name: Scale
-    description: Most popular plan for small businesses needing advanced productivity
-      features including automated reporting and campaigns.
+      - smartQueues: 30
+      - assignmentAndApprovals: true
+  - name: Premium
+    description: Advanced productivity tools for scaling agencies and brands.
     url: https://www.sendible.com/pricing
     price: 199.00
     unit: month
     currency: USD
     billingCycle: monthly
+    annualPricePerMonth: 170.00
     features:
-      - users: 7
-      - socialProfiles: 49
+      - users: unlimited
+      - workspaces: 7
+      - socialProfiles: 42
       - dailySends: 300
-      - customReports: true
-      - automatedReports: true
-      - contentLibrary: true
+      - smartQueues: 70
+      - contentLibraries: true
+      - customBrandedReports: true
       - campaigns: true
-      - dedicatedAccountManager: true
-      - teamCollaboration: true
-      - approvalWorkflows: true
-    pricingPage: https://www.sendible.com/pricing
-  - name: Scale Annual
-    description: Scale plan billed annually, saving approximately 15%.
-    url: https://www.sendible.com/pricing
-    price: 2040.00
-    unit: year
-    currency: USD
-    billingCycle: annual
-    features:
-      - users: 7
-      - socialProfiles: 49
-      - dailySends: 300
-      - customReports: true
-      - automatedReports: true
-      - contentLibrary: true
-      - campaigns: true
-      - dedicatedAccountManager: true
-    pricingPage: https://www.sendible.com/pricing
-  - name: Advanced
-    description: For growing businesses, agencies, and resellers needing bulk posting,
-      advanced permissions, and white-label options.
+      - dedicatedOnboarding: true
+  - name: Elite
+    description: Advanced bulk posting and permissions for growing agencies and multi-location brands.
     url: https://www.sendible.com/pricing
     price: 299.00
     unit: month
     currency: USD
     billingCycle: monthly
+    annualPricePerMonth: 255.00
     features:
-      - users: 20
-      - socialProfiles: 100
+      - users: unlimited
+      - workspaces: 15
+      - socialProfiles: 90
       - dailySends: 500
-      - bulkPosting: true
-      - customTags: true
-      - advancedPermissions: true
-      - liveReportSharing: true
+      - smartQueues: unlimited
+      - dynamicFields: true
+      - advancedUserPermissions: true
       - whiteLabelAddOn: true
-      - teamCollaboration: true
-      - approvalWorkflows: true
-      - automatedReports: true
-    pricingPage: https://www.sendible.com/pricing
-  - name: Advanced Annual
-    description: Advanced plan billed annually, saving approximately 15%.
-    url: https://www.sendible.com/pricing
-    price: 3060.00
-    unit: year
-    currency: USD
-    billingCycle: annual
-    features:
-      - users: 20
-      - socialProfiles: 100
-      - dailySends: 500
-      - bulkPosting: true
-      - advancedPermissions: true
-      - whiteLabelAddOn: true
-    pricingPage: https://www.sendible.com/pricing
   - name: Enterprise
-    description: For larger agencies, franchises, and multi-location businesses needing
-      full feature access including SSO and dedicated support.
+    description: Largest self-serve tier, with SSO and a dedicated account manager.
     url: https://www.sendible.com/pricing
     price: 750.00
     unit: month
     currency: USD
     billingCycle: monthly
+    annualPricePerMonth: 638.00
     features:
-      - users: 80
-      - socialProfiles: 400
+      - users: unlimited
+      - workspaces: 50
+      - socialProfiles: 300
+      - dailySends: 500
+      - smartQueues: unlimited
       - sso: true
-      - dedicatedSuccessTeam: true
-      - allFeatures: true
+      - dedicatedAccountManager: true
       - whiteLabelAddOn: true
-      - scalableUsersAndProfiles: true
-    pricingPage: https://www.sendible.com/pricing
-  - name: Enterprise Annual
-    description: Enterprise plan billed annually, saving approximately 15%.
-    url: https://www.sendible.com/pricing
-    price: 7656.00
-    unit: year
+addOns:
+  - name: White label (Elite)
+    description: >-
+      Brand the dashboard, domain, reports and emails entirely as your own.
+      Available on Elite for an additional fee.
+    price: 349.00
+    unit: month
     currency: USD
-    billingCycle: annual
-    features:
-      - users: 80
-      - socialProfiles: 400
-      - sso: true
-      - dedicatedSuccessTeam: true
-      - allFeatures: true
-    pricingPage: https://www.sendible.com/pricing
+  - name: White label (Enterprise)
+    description: White labelling on the Enterprise plan, for an additional fee.
+    price: 800.00
+    unit: month
+    currency: USD
+  - name: Additional workspace bundle
+    description: >-
+      Extra workspaces can be added or removed at any time from subscription
+      settings; every additional workspace includes 6 extra social profiles.
+    price: null
+    unit: month
+    currency: USD
 notes:
-  - White-label features require a separate add-on at $240/month, available on Advanced
-    and Enterprise tiers only.
-  - Daily sending caps apply across all subscription levels.
-  - SSO is available exclusively on the Enterprise plan.
-  - 14-day free trial available on all plans, no credit card required.
-  - Annual billing provides approximately 15% savings over monthly billing.
+  - Prices are also published in GBP and EUR; USD is recorded here.
+  - Annual figures are the per-month equivalent when billed yearly (~15% saving).
+  - No API access tier, API quota or API-specific pricing is published on any plan.
+  - >-
+    Supersedes the 2026-06 capture of this file, which recorded the retired
+    Creator / Traction / Scale / Advanced tier names and prices. The tier lineup
+    and pricing were re-read from the pricing page on 2026-08-13.
