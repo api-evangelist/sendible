@@ -25,6 +25,13 @@ created: '2026-06-13'
 modified: '2026-08-13'
 specificationVersion: '0.23'
 tags:
+  - Social-Media
+  - Social Media Management
+  - Agencies
+  - Scheduling
+  - Analytics
+  - Monitoring
+tags_raw:
   - Social Media
   - Social Media Management
   - Agencies
@@ -45,6 +52,11 @@ apis:
     humanURL: https://www.sendible.com/solutions/software-integrators
     baseURL: https://api.sendible.com
     tags:
+      - Social-Media
+      - Scheduling
+      - Analytics
+      - Agencies
+    tags_raw:
       - Social Media
       - Scheduling
       - Analytics
