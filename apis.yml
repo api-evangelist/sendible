@@ -36,7 +36,7 @@ created: '2026-06-13'
 modified: '2026-08-13'
 specificationVersion: '0.23'
 tags:
-  - Social-Media
+  - Social Media
   - Social Media Management
   - Agencies
   - Scheduling
@@ -49,6 +49,7 @@ tags_raw:
   - Scheduling
   - Analytics
   - Monitoring
+  - Social-Media
 apis:
   - name: Sendible API
     description: REST API for managing social media clients, scheduling posts, monitoring
@@ -63,7 +64,7 @@ apis:
     humanURL: https://www.sendible.com/solutions/software-integrators
     baseURL: https://api.sendible.com
     tags:
-      - Social-Media
+      - Social Media
       - Scheduling
       - Analytics
       - Agencies
@@ -72,6 +73,7 @@ apis:
       - Scheduling
       - Analytics
       - Agencies
+      - Social-Media
     properties:
       - type: Plans
         url: https://raw.githubusercontent.com/api-evangelist/sendible/refs/heads/main/plans/sendible-plans-pricing.yml
